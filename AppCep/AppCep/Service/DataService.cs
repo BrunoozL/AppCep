@@ -24,7 +24,7 @@ namespace AppCep.Service
 
                     end = JsonConvert.DeserializeObject<Endereco>(json);
                 }
-                else 
+                else
                     throw new Exception(response.RequestMessage.Content.ToString());
             }
             return end;
@@ -34,7 +34,7 @@ namespace AppCep.Service
         {
             List<Bairro> arr_bairros = new List<Bairro>();
 
-            using(HttpClient client = new HttpClient())
+            using (HttpClient client = new HttpClient())
             {
                 HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=");
 
@@ -69,4 +69,45 @@ namespace AppCep.Service
             }
             return arr_cidades;
         }
+
+        public static async Task<List<Logradouro>> GetLogradouroByBairroAndCidade(string bairro, int id_cidade)
+        {
+            List<Logradouro> arr_logradouro = new List<Logradouro>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/logradouro/by-bairro?id_cidade=&bairro=");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+
+                    arr_logradouro = JsonConvert.DeserializeObject<List<Logradouro>>(json);
+                }
+                else
+                    throw new Exception(response.RequestMessage.Content.ToString());
+            }
+            return arr_logradouro;
+        }
+
+        public static async Task<List<Logradouro>> GetCepByLogradouro(int cep)
+        {
+            List<Logradouro> arr_logradourocep = new List<Logradouro>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+
+                    arr_logradourocep = JsonConvert.DeserializeObject<List<Logradouro>>(json);
+                }
+                else
+                    throw new Exception(response.RequestMessage.Content.ToString());
+            }
+            return arr_logradourocep;
+        }
+    }
 }
