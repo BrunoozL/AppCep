@@ -90,9 +90,9 @@ namespace AppCep.Service
             return arr_logradouro;
         }
 
-        public static async Task<List<Logradouro>> GetCepByLogradouro(int cep)
+        public static async Task<List<Cep>> GetCepsByLogradouro(int cep)
         {
-            List<Logradouro> arr_logradourocep = new List<Logradouro>();
+            List<Cep> arr_cep = new List<Cep>();
 
             using (HttpClient client = new HttpClient())
             {
@@ -102,12 +102,12 @@ namespace AppCep.Service
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
 
-                    arr_logradourocep = JsonConvert.DeserializeObject<List<Logradouro>>(json);
+                    arr_cep = JsonConvert.DeserializeObject<List<Cep>>(json);
                 }
                 else
                     throw new Exception(response.RequestMessage.Content.ToString());
             }
-            return arr_logradourocep;
+            return arr_cep;
         }
     }
 }

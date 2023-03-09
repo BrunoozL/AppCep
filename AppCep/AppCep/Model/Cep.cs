@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppCep.Model
 {
-    public class Logradouro
+    public class Cep
     {
         public int cep { get; set; }
         public int id_logradouro { get; set; }
@@ -17,6 +17,5 @@ namespace AppCep.Model
         public string descricao_cidade { get; set; }
         public int codigo_cidade_ibge { get; set; }
         public string descricao_bairro { get; set; }
-
     }
 }
