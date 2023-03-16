@@ -43,7 +43,7 @@ namespace AppCep.View
             }
         }
 
-        private void pck_cidade_SelectedIndexChanged(object sender, EventArgs e)
+        private async void pck_cidade_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

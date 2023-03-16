@@ -22,5 +22,20 @@ namespace AppCep
             Navigation.PushAsync(new View.BuscaCepPorLogradouro());
 
         }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new View.BuscaCidadesPorEstado());
+        }
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new View.BuscaLogradouroPorBairroAndCIdade());
+        }
+
+        private void Button_Clicked_3(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new View.BuscaEnderecoPorCep());
+        }
     }
 }
