@@ -32,7 +32,7 @@
     <EmbeddedResource Update="View\BuscaEnderecoPorCep.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\BuscaLogradouroPorBairroAndCIdade.xaml">
+    <EmbeddedResource Update="View\BuscaLogradouroPorBairrosAndCidade.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

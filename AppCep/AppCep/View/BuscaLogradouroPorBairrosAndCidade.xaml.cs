@@ -10,11 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace AppCep.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BuscaLogradouroPorBairroAndCIdade : ContentPage
+    public partial class BuscaLogradouroPorBairrosAndCidade : ContentPage
     {
-        public BuscaLogradouroPorBairroAndCIdade()
+        public BuscaLogradouroPorBairrosAndCidade()
         {
             InitializeComponent();
+        }
+
+        private void pck_cidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

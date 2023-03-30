@@ -25,12 +25,12 @@ namespace AppCep
 
         private void Button_Clicked_1(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View.BairrosPorCidade());
+            Navigation.PushAsync(new View.BairrosPorCidade()); //finalizado
         }
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View.BuscaLogradouroPorBairroAndCIdade());
+            Navigation.PushAsync(new View.BuscaLogradouroPorBairrosAndCidade());
         }
 
         private void Button_Clicked_3(object sender, EventArgs e)
