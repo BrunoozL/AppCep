@@ -21,5 +21,10 @@ namespace AppCep.View
         {
 
         }
+
+        private void pck_estado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

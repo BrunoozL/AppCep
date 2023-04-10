@@ -5,7 +5,14 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-
+                <Picker x:Name="pck_estado"
+                        SelectedIndexChanged="pck_estado_SelectedIndexChanged"
+                        Title="Selecione o Estado:">
+                    <Picker.Items>
+                        <x:String>SP</x:String>
+                        <x:String>MG</x:String>
+                    </Picker.Items>
+                </Picker>
 
                 <Picker x:Name="pck_cidade"
                         SelectedIndexChanged="pck_cidade_SelectedIndexChanged"
@@ -15,15 +22,6 @@
             </StackLayout>
 
             <ListView x:Name="lst_logradouros">
-                <ListView.Header>
-                    <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
-                        <Label Grid.Row="0" Grid.Column="0" Text="CEP"/>
-                        <Label Grid.Row="0" Grid.Column="1" Text="Logradouro"/>
-                        <Label Grid.Row="0" Grid.Column="2" Text="Tipo"/>
-                        <Label Grid.Row="0" Grid.Column="3" Text="Descrição"/>
-                        <Label Grid.Row="0" Grid.Column="4" Text="Cidade"/>
-                    </Grid>
-                </ListView.Header>
 
                 <ListView.ItemTemplate>
                     <DataTemplate>

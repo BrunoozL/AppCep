@@ -58,5 +58,10 @@ namespace AppCep.View
                 await DisplayAlert("Ops", ex.Message, "OK");
             }
         }
+
+        private void pck_bairros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

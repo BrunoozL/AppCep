@@ -20,6 +20,14 @@
                         ItemDisplayBinding="{Binding descricao}"
                         Title="Selecione a Cidade:">
                 </Picker>
+
+                <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
+                    <Picker x:Name="pck_bairros"
+                        SelectedIndexChanged="pck_bairros_SelectedIndexChanged"
+                        ItemDisplayBinding="{Binding descricao_bairro}"
+                        Title="Selecione o Bairro:">
+                </Picker>
+                </Grid>
             </StackLayout>
 
             <ListView x:Name="lst_bairros">
