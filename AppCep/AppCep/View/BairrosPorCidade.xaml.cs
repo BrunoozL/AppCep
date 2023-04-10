@@ -37,7 +37,7 @@ namespace AppCep.View
                 lista_cidades.Clear();
                 arr_cidades.ForEach(i => lista_cidades.Add(i));
             }
-            catch (Exception ex)
+            catch (Exception ex)        
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
             }
